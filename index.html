@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>SHOW DO MILHÃO SAEP ADM 023</title>
+  <link rel="preload" href="assets/suspense.wav" as="audio">
+  <link rel="preload" href="assets/aplausos.wav" as="audio">
+  <link rel="preload" href="assets/erro.wav" as="audio">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="app">
+    <header class="topbar">
+      <div class="branding">
+        <h1>SHOW DO MILHÃO</h1>
+        <span class="subtitle">SAEP ADM 023</span>
+      </div>
+      <div class="scoreboard">
+        <div class="score">Pontos: <span id="score">0</span></div>
+        <div class="round">Pergunta <span id="qnum">0</span>/<span id="qtotal">0</span></div>
+        <div class="timer" id="timer">--</div>
+      </div>
+    </header>
+
+    <main class="stage">
+      <div class="question-card">
+        <h2 id="question">Clique em "Iniciar" para começar!</h2>
+        <div id="options" class="options"></div>
+        <div class="controls">
+          <button id="startBtn" class="btn primary">Iniciar</button>
+          <button id="nextBtn" class="btn" disabled>Próxima</button>
+          <button id="resetBtn" class="btn ghost">Reiniciar</button>
+        </div>
+      </div>
+      <div class="progress">
+        <div id="progressBar" class="progress-bar"></div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <span>Trabalho do curso técnico em Administração.</span>
+      <span>Funciona em celular e computador.</span>
+    </footer>
+  </div>
+
+  <audio id="sndSuspense" src="assets/suspense.wav" preload="auto" loop></audio>
+  <audio id="sndAplausos" src="assets/aplausos.wav" preload="auto"></audio>
+  <audio id="sndErro" src="assets/erro.wav" preload="auto"></audio>
+
+  <script src="questions.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
